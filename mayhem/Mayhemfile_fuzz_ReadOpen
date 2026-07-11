@@ -1,0 +1,8 @@
+project: metallb
+target: fuzz_ReadOpen
+cmds:
+  - cmd: /mayhem/fuzz_ReadOpen
+    libfuzzer: true
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_ReadOpen/testsuite

@@ -1,0 +1,5 @@
+# Per-Dockerfile build-context filter for mayhem/Dockerfile (BuildKit honors
+# <dockerfile>.dockerignore in preference to the repo-root .dockerignore). The root
+# .dockerignore excludes `.git`, but the commit image MUST bake the full mayhem-branch
+# history (SPEC §6.2 item 2), so this override KEEPS .git — no exclusions needed, the
+# repo has no heavy media to prune.
